@@ -1,0 +1,19 @@
+{
+  "name": "sparx-app",
+  "version": "1.0.0",
+  "description": "a video calling web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankit98040/Sparx-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankit98040/Sparx-app/issues"
+  },
+  "homepage": "https://github.com/ankit98040/Sparx-app#readme"
+}
