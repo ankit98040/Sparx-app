@@ -43,6 +43,7 @@ navigator.mediaDevices.getUserMedia({
 
     socket.on('createMessage', message => {
         $('.messages').append(`<li ckass="message"><b>user</b><br>${message}</li>`)
+        scrollToBottom()
     })
 });
 
@@ -64,4 +65,20 @@ function addVideoStream(video, stream) {
         video.play()
     })
     videoGrid.append(video)
+}
+
+const scrollToBottom = () => {
+    var d = $('.main__chat_window');
+    d.scrollTop(d.prop("ScrollHeight"));
+}
+
+const muteUnmute = () => {
+    const enabled = myVideoStream.getAudioTracks()[0].enabled;
+    if (enabled) {
+        myVideoStream.getAudioTracks()[0] = false;
+        setUnmuteButton();
+    } else {
+        setMuteButton();
+        myVideoStream.getAudioTracks()[0].enabled = true;
+    }
 }
